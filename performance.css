@@ -1,0 +1,85 @@
+/* General styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  main {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap;
+    justify-content: center; /* Center elements horizontally */
+    align-items: center; /* Align elements vertically */
+  }
+  
+  section {
+    margin: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff; /* White background for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  button {
+    background-color: #007bff; /* Blue background for button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Specific styling for centering the login tab */
+  /* Assuming the login tab is within a section */
+  .login-tab {
+    display: flex;
+    justify-content: center; /* Center the login form within its section */
+    align-items: center; /* Optional for vertical alignment */
+  }
+  

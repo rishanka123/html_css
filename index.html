@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome</h1>
+        <h2>Email Login</h2>
+        <form id="emailLoginForm" action="#" method="post">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" onclick="settingsPage()">Login</button>
+        </form>
+        <div class="other-options">
+            <p>Or login with:</p>
+            <a href="#" onclick="loginWithGoogle()"><img src="https://banner2.cleanpng.com/20180521/ers/kisspng-google-logo-5b02bbe1d5c6e0.2384399715269058258756.jpg" alt="Login with Google" width="30" height="30"></a>
+            <a href="#" onclick="loginWithMicrosoft()"><img src="https://pngimg.com/d/microsoft_PNG13.png" alt="Login with Microsoft" width="30" height="30"></a>
+        </div>
+        <p>Don't have an account? <a href="register.php">Register</a></p>
+    </div>
+
+    <script>
+        function loginWithGoogle() {
+            // Redirect to Google authentication URL
+            window.location.href = '/home/mr1ncr1d1ble/proj/google.html'; // Replace with actual Google authentication URL
+        }
+
+        function loginWithMicrosoft() {
+            // Redirect to Microsoft authentication URL
+            window.location.href = '/home/mr1ncr1d1ble/proj/microsoft.html'; // Replace with actual Microsoft authentication URL
+        }
+        function settingsPage(){
+            window.location.href = '/home/mr1ncr1d1ble/proj/settingsPage.html';
+        }
+    </script>
+</body>
+</html>

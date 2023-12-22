@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .settings-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .admin-settings {
+            display: none;
+        }
+
+        .admin-settings.active {
+            display: block;
+        }
+
+        .tab {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px 4px 0 0;
+            margin-bottom: -1px;
+        }
+
+        .tab:hover {
+            background-color: #2980b9;
+        }
+
+        .content {
+            padding: 20px;
+            border: 1px solid #3498db;
+            border-radius: 0 0 4px 4px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="settings-box">
+            <div class="tab" onclick="showBasicSettings()">Basic Settings</div>
+            <div class="tab" onclick="showAdminSettings()">Admin Settings</div>
+
+            <div class="content">
+                <!-- Basic Settings -->
+                <div id="basic-settings">
+                    <h2>Basic Settings</h2>
+                    <form action="#">
+                        <label for="contactInfo">Contact Info:</label>
+                        <input type="text" id="contactInfo" name="contactInfo" placeholder="Enter your contact info">
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+
+                <!-- Admin Settings -->
+                <div id="admin-settings" class="admin-settings">
+                    <h2>Admin Settings</h2>
+                    <p>Role and rights management features go here for admin users.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showBasicSettings() {
+            document.getElementById('basic-settings').style.display = 'block';
+            document.getElementById('admin-settings').style.display = 'none';
+        }
+
+        function showAdminSettings() {
+            document.getElementById('basic-settings').style.display = 'none';
+            document.getElementById('admin-settings').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP Management</title>
+    <link rel="stylesheet" href="sop.css">
+</head>
+<body>
+    <div class="sop-container">
+        <h1>SOP Management</h1>
+        <div id="admin-content" style="display: none;">
+            <input type="file" id="fileInput" multiple accept=".txt, .doc, .docx, .ppt, .xls, .csv, .pptx, .mp4">
+            <button onclick="uploadFiles()">Upload Files</button>
+        </div>
+        <div id="access-denied" style="display: none;">
+            <p>Access denied. You need admin privileges to access this page.</p>
+        </div>
+    </div>
+
+    <script>
+        // Simulate admin role (replace with actual authentication logic)
+        const isAdmin = true;
+
+        // Check if the user is an admin
+        if (isAdmin) {
+            document.getElementById('admin-content').style.display = 'block';
+        } else {
+            document.getElementById('access-denied').style.display = 'block';
+        }
+
+        function uploadFiles() {
+            const fileInput = document.getElementById('fileInput');
+            const files = fileInput.files;
+
+            // Send files to the server for processing and storage
+            // You need to implement server-side logic to handle file uploads, embedding, and storage
+            // This may involve using a server-side framework (e.g., Node.js with Express)
+
+            // For simplicity, we'll just log the file names here
+            for (const file of files) {
+                console.log(`Uploaded file: ${file.name}`);
+            }
+        }
+    </script>
+</body>
+</html>

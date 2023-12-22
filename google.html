@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome</h1>
+        <h2>Gmail Login</h2>
+        <form id="emailLoginForm" action="#" method="post">
+            <div class="input-group">
+                <label for="email">Gmail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" onclick="settingsPage()">Login</button>
+        </form>
+       
+    </div>
+    <script>
+        function settingsPage() {
+            window.location.href = '/home/mr1ncr1d1ble/proj/settingsPage.html';
+        }
+    </script>
+
+  
+</body>
+</html>
